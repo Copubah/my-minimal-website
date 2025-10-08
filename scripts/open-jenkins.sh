@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Opening Jenkins..."
+echo " Opening Jenkins..."
 echo "Jenkins URL: http://localhost:8080"
 echo ""
 echo "If you can't login, run: ./scripts/reset-jenkins-password.sh"

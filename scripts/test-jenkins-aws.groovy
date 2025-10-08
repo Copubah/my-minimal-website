@@ -22,8 +22,8 @@ pipeline {
                         // Check if our bucket exists
                         sh "aws s3 ls s3://${env.S3_BUCKET}/"
                         
-                        echo "✅ AWS connection successful!"
-                        echo "✅ S3 bucket '${env.S3_BUCKET}' is accessible!"
+                        echo " AWS connection successful!"
+                        echo " S3 bucket '${env.S3_BUCKET}' is accessible!"
                     }
                 }
             }
