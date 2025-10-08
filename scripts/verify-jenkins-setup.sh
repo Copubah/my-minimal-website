@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Jenkins Setup Verification Script
-# Run this after completing the Jenkins configuration
+# Verifies Jenkins installation, plugins, and configuration
+# Usage: ./verify-jenkins-setup.sh
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Complete Jenkins Setup Script for Steps B, C, D
+# Complete Jenkins Setup Script
+# Automates Jenkins configuration for AWS S3 deployment pipeline
+# Usage: ./complete-jenkins-setup.sh
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
