@@ -1,6 +1,6 @@
 # AWS Credentials Configuration
 
-## 🔑 You'll need these details for Jenkins:
+## You'll need these details for Jenkins:
 
 ### IAM User Information:
 - **Username:** `jenkins-s3-deployer` (created earlier)
@@ -14,12 +14,12 @@
 - **Access Key ID:** [Paste your Access Key here]
 - **Secret Access Key:** [Paste your Secret Key here]
 
-## 🚨 Important Notes:
+## Important Notes:
 - The credential ID MUST be exactly: `aws-s3-credentials`
 - This matches what's configured in your Jenkinsfile
 - Keep your AWS keys secure and never commit them to code
 
-## 🔍 To find your AWS keys:
+## To find your AWS keys:
 1. Go to AWS Console → IAM → Users
 2. Click on `jenkins-s3-deployer`
 3. Security credentials tab

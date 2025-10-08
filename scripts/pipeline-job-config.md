@@ -1,6 +1,6 @@
 # Pipeline Job Configuration
 
-## 📋 Exact Settings for Jenkins Pipeline Job
+## Exact Settings for Jenkins Pipeline Job
 
 ### Job Creation:
 - **Item name:** `my-website-deployment`
@@ -8,11 +8,11 @@
 - **Description:** `Automated deployment of minimal website to AWS S3`
 
 ### General Configuration:
-- ✅ **GitHub project**
+- **GitHub project**
 - **Project URL:** `https://github.com/Copubah/my-minimal-website/`
 
 ### Build Triggers:
-- ✅ **GitHub hook trigger for GITScm polling**
+- **GitHub hook trigger for GITScm polling**
 
 ### Pipeline Configuration:
 - **Definition:** Pipeline script from SCM
@@ -23,15 +23,15 @@
 - **Script Path:** `Jenkinsfile`
 
 ### Advanced Options (if available):
-- **Lightweight checkout:** ✅ (recommended)
+- **Lightweight checkout:** (recommended)
 
-## 🎯 Expected Pipeline Stages:
+## Expected Pipeline Stages:
 1. **Checkout** - Downloads code from GitHub
 2. **Validate Files** - Checks for required files
 3. **Deploy to S3** - Uploads files to S3 bucket
 4. **Verify Deployment** - Tests website accessibility
 
-## 🔍 Success Indicators:
+## Success Indicators:
 - All stages show green checkmarks
 - Console output shows: "Pipeline completed successfully!"
 - Website accessible at: http://opuba236.s3-website-us-east-1.amazonaws.com

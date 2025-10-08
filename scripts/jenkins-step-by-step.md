@@ -1,6 +1,6 @@
 # Jenkins Step-by-Step Configuration Guide
 
-## 🚀 Access Jenkins: http://localhost:8080
+## Access Jenkins: http://localhost:8080
 
 ---
 
@@ -14,11 +14,11 @@
 ### 2. Search and Install These Plugins:
 **Search for each plugin and check the box:**
 
-✅ **Pipeline** (likely already installed)
-✅ **GitHub Integration Plugin** (already installed ✓)
-✅ **AWS Pipeline Plugin** - SEARCH: "AWS Pipeline"
-✅ **Pipeline: AWS Steps** - SEARCH: "Pipeline AWS Steps"  
-✅ **HTTP Request Plugin** - SEARCH: "HTTP Request"
+ **Pipeline** (likely already installed)
+ **GitHub Integration Plugin** (already installed ✓)
+ **AWS Pipeline Plugin** - SEARCH: "AWS Pipeline"
+ **Pipeline: AWS Steps** - SEARCH: "Pipeline AWS Steps" 
+ **HTTP Request Plugin** - SEARCH: "HTTP Request"
 
 ### 3. Install Process:
 - Check boxes for the plugins you need
@@ -63,11 +63,11 @@
 
 #### General Section:
 - **Description:** `Automated deployment of minimal website to AWS S3`
-- ✅ Check **GitHub project**
+- Check **GitHub project**
 - **Project url:** `https://github.com/Copubah/my-minimal-website/`
 
 #### Build Triggers:
-- ✅ Check **GitHub hook trigger for GITScm polling**
+- Check **GitHub hook trigger for GITScm polling**
 
 #### Pipeline Section:
 - **Definition:** Select "Pipeline script from SCM"
@@ -82,7 +82,7 @@
 
 ---
 
-## 🧪 Test Your Setup
+## Test Your Setup
 
 ### 1. Manual Build Test
 - Go to your pipeline job: `my-website-deployment`
@@ -91,25 +91,25 @@
 - Click **Console Output** to see logs
 
 ### 2. Expected Results:
-✅ Checkout stage completes
-✅ File validation passes  
-✅ S3 deployment succeeds
-✅ Website verification passes
-✅ Final message: "Your website is live at: http://opuba236.s3-website-us-east-1.amazonaws.com"
+ Checkout stage completes
+ File validation passes 
+ S3 deployment succeeds
+ Website verification passes
+ Final message: "Your website is live at: http://opuba236.s3-website-us-east-1.amazonaws.com"
 
 ---
 
-## 🔗 Setup GitHub Webhook (Auto-deployment)
+## Setup GitHub Webhook (Auto-deployment)
 
 ### 1. In GitHub Repository:
 - Go to: https://github.com/Copubah/my-minimal-website
 - Click **Settings** → **Webhooks** → **Add webhook**
 - **Payload URL:** `http://YOUR-IP:8080/github-webhook/`
-  - Replace YOUR-IP with your actual IP address
-  - For local testing: `http://localhost:8080/github-webhook/`
+ - Replace YOUR-IP with your actual IP address
+ - For local testing: `http://localhost:8080/github-webhook/`
 - **Content type:** `application/json`
 - **Which events:** Select "Just the push event"
-- ✅ **Active**
+- **Active**
 - Click **Add webhook**
 
 ### 2. Test Auto-deployment:
@@ -119,7 +119,7 @@
 
 ---
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Plugin Installation Issues:
 - Restart Jenkins: `sudo systemctl restart jenkins`

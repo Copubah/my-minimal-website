@@ -14,7 +14,7 @@ sudo sed -i 's/<useSecurity>true<\/useSecurity>/<useSecurity>false<\/useSecurity
 echo "Starting Jenkins..."
 sudo systemctl start jenkins
 
-echo "✅ Jenkins started without authentication"
+echo " Jenkins started without authentication"
 echo "🌐 Go to: http://localhost:8080"
 echo ""
 echo "📝 To create a new admin user:"
@@ -24,4 +24,4 @@ echo "3. Go to Configure Global Security"
 echo "4. Enable 'Jenkins' own user database'"
 echo "5. Save configuration"
 echo ""
-echo "⚠️  Remember to re-enable security after creating your user!"
+echo "  Remember to re-enable security after creating your user!"

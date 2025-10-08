@@ -20,9 +20,9 @@
 
 ### 2. Verify S3 Bucket
 - [ ] Files uploaded to S3 bucket:
-  - [ ] `index.html`
-  - [ ] `main.css`
-  - [ ] `script.js`
+ - [ ] `index.html`
+ - [ ] `main.css`
+ - [ ] `script.js`
 - [ ] Files have public read permissions
 - [ ] Static website hosting is enabled
 

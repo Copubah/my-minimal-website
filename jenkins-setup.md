@@ -29,11 +29,11 @@ Go to **Manage Jenkins** → **Manage Plugins** → **Available** and install:
 
 1. **New Item** → **Pipeline** → Name: `my-website-deployment`
 2. **Pipeline Configuration:**
-   - **Definition:** Pipeline script from SCM
-   - **SCM:** Git
-   - **Repository URL:** `https://github.com/Copubah/my-minimal-website.git`
-   - **Branch:** `*/main`
-   - **Script Path:** `Jenkinsfile`
+ - **Definition:** Pipeline script from SCM
+ - **SCM:** Git
+ - **Repository URL:** `https://github.com/Copubah/my-minimal-website.git`
+ - **Branch:** `*/main`
+ - **Script Path:** `Jenkinsfile`
 
 ## Step 4: Configure GitHub Webhook (Auto-trigger)
 
@@ -55,9 +55,9 @@ Go to **Manage Jenkins** → **Manage Plugins** → **Available** and install:
 Edit the `Jenkinsfile` in your repo and update:
 ```groovy
 environment {
-    AWS_DEFAULT_REGION = 'YOUR-AWS-REGION'  // e.g., 'us-east-1'
-    S3_BUCKET = 'YOUR-ACTUAL-BUCKET-NAME'   // e.g., 'my-minimal-website-12345'
-    AWS_CREDENTIALS_ID = 'aws-s3-credentials'
+ AWS_DEFAULT_REGION = 'YOUR-AWS-REGION' // e.g., 'us-east-1'
+ S3_BUCKET = 'YOUR-ACTUAL-BUCKET-NAME' // e.g., 'my-minimal-website-12345'
+ AWS_CREDENTIALS_ID = 'aws-s3-credentials'
 }
 ```
 

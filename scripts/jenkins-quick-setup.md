@@ -5,11 +5,11 @@
 ### Step 1: Install Required Plugins
 1. Go to **Manage Jenkins** → **Manage Plugins** → **Available**
 2. Search and install these plugins:
-   -  Pipeline (usually pre-installed)
-   - GitHub Integration Plugin
-   -  AWS Pipeline Plugin  
-   - Pipeline: AWS Steps
-   -  HTTP Request Plugin
+ - Pipeline (usually pre-installed)
+ - GitHub Integration Plugin
+ - AWS Pipeline Plugin 
+ - Pipeline: AWS Steps
+ - HTTP Request Plugin
 
 ### Step 2: Add AWS Credentials
 1. **Manage Jenkins** → **Manage Credentials**
@@ -25,11 +25,11 @@
 1. **New Item** → **Pipeline** 
 2. **Name:** `my-website-deployment`
 3. **Pipeline Configuration:**
-   - **Definition:** Pipeline script from SCM
-   - **SCM:** Git
-   - **Repository URL:** `https://github.com/Copubah/my-minimal-website.git`
-   - **Branch:** `*/main`
-   - **Script Path:** `Jenkinsfile`
+ - **Definition:** Pipeline script from SCM
+ - **SCM:** Git
+ - **Repository URL:** `https://github.com/Copubah/my-minimal-website.git`
+ - **Branch:** `*/main`
+ - **Script Path:** `Jenkinsfile`
 4. **Save**
 
 ### Step 4: Test Manual Build
@@ -53,7 +53,7 @@
 - Website should be live at: http://opuba236.s3-website-us-east-1.amazonaws.com
 - Future pushes to GitHub should trigger automatic deployment
 
-##  Troubleshooting:
+## Troubleshooting:
 - **Plugin issues:** Restart Jenkins after installing plugins
 - **AWS credentials:** Double-check Access Key and Secret Key
 - **Webhook:** Ensure Jenkins is accessible from internet for GitHub webhooks

@@ -1,6 +1,6 @@
 # Testing Pipeline and Setting Up Auto-Deployment
 
-## 🧪 Step 3: Test the Pipeline
+## Step 3: Test the Pipeline
 
 ### Manual Build Test:
 1. Go to your pipeline job: `my-website-deployment`
@@ -19,20 +19,20 @@ Deploying to AWS S3...
 Deployment completed successfully! ✓
 Verifying deployment...
 Website should be available at: http://opuba236.s3-website-us-east-1.amazonaws.com
-🎉 Pipeline completed successfully!
+ Pipeline completed successfully!
 ```
 
 ### If Build Fails:
 - Check Console Output for error messages
 - Common issues:
-  - AWS credentials not configured
-  - Missing plugins
-  - S3 bucket permissions
-  - GitHub repository access
+ - AWS credentials not configured
+ - Missing plugins
+ - S3 bucket permissions
+ - GitHub repository access
 
 ---
 
-## 🔗 Step 4: Set Up Auto-Deployment (GitHub Webhook)
+## Step 4: Set Up Auto-Deployment (GitHub Webhook)
 
 ### Option A: Local Testing (Skip webhook for now)
 - Test by running manual builds
@@ -45,27 +45,27 @@ Website should be available at: http://opuba236.s3-website-us-east-1.amazonaws.c
 1. Go to: https://github.com/Copubah/my-minimal-website
 2. **Settings** → **Webhooks** → **Add webhook**
 3. **Payload URL:** `http://YOUR-PUBLIC-IP:8080/github-webhook/`
-   - Replace YOUR-PUBLIC-IP with your actual public IP
-   - For local testing: skip this step
+ - Replace YOUR-PUBLIC-IP with your actual public IP
+ - For local testing: skip this step
 4. **Content type:** `application/json`
 5. **Which events:** Just the push event
-6. **Active:** ✅
+6. **Active:** 
 7. **Add webhook**
 
 #### Test Auto-Deployment:
 1. Make a small change to your website (e.g., edit index.html)
 2. Commit and push to GitHub:
-   ```bash
-   git add .
-   git commit -m "Test auto-deployment"
-   git push origin main
-   ```
+ ```bash
+ git add .
+ git commit -m "Test auto-deployment"
+ git push origin main
+ ```
 3. Check Jenkins - build should start automatically
 4. Verify changes appear on live website
 
 ---
 
-## 🎯 Quick Test Script
+## Quick Test Script
 
 Run this after successful manual build:
 ```bash
@@ -75,7 +75,7 @@ curl -I http://opuba236.s3-website-us-east-1.amazonaws.com
 # Should return: HTTP/1.1 200 OK
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Build Fails with AWS Error:
 - Check AWS credentials in Jenkins

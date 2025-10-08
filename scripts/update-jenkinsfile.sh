@@ -26,7 +26,7 @@ sed -i "s/S3_BUCKET = 'my-minimal-website-12345'/S3_BUCKET = '$BUCKET_NAME'/" Je
 
 echo -e "${GREEN}Jenkinsfile updated successfully!${NC}"
 echo -e "${YELLOW} Updated values:${NC}"
-echo -e "   Bucket: $BUCKET_NAME"
-echo -e "   Region: $REGION"
+echo -e "Bucket: $BUCKET_NAME"
+echo -e "Region: $REGION"
 
 echo -e "${YELLOW} Ready to commit and push changes!${NC}"

@@ -4,10 +4,10 @@
 
 1. **Login to AWS Console** → Navigate to S3
 2. **Create Bucket:**
-   - Bucket name: `my-minimal-website-[unique-suffix]` (e.g., `my-minimal-website-12345`)
-   - Region: Choose your preferred region (e.g., `us-east-1`)
-   - **Uncheck "Block all public access"**
-   - Acknowledge the warning about public access
+ - Bucket name: `my-minimal-website-[unique-suffix]` (e.g., `my-minimal-website-12345`)
+ - Region: Choose your preferred region (e.g., `us-east-1`)
+ - **Uncheck "Block all public access"**
+ - Acknowledge the warning about public access
 
 ## Step 2: Enable Static Website Hosting
 
@@ -24,16 +24,16 @@ Go to **Permissions** tab → **Bucket policy** → Add this policy:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
-        }
-    ]
+ "Version": "2012-10-17",
+ "Statement": [
+ {
+ "Sid": "PublicReadGetObject",
+ "Effect": "Allow",
+ "Principal": "*",
+ "Action": "s3:GetObject",
+ "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
+ }
+ ]
 }
 ```
 
@@ -44,7 +44,7 @@ Go to **Permissions** tab → **Bucket policy** → Add this policy:
 1. **IAM Console** → Users → Create user
 2. **Username:** `jenkins-s3-deployer`
 3. **Attach policies directly:**
-   - `AmazonS3FullAccess` (or create custom policy for specific bucket)
+ - `AmazonS3FullAccess` (or create custom policy for specific bucket)
 4. **Create user**
 5. **Security credentials** → Create access key
 6. **Use case:** Application running outside AWS

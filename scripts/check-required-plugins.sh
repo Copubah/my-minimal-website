@@ -7,7 +7,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "${YELLOW}🔍 Checking Required Jenkins Plugins...${NC}"
+echo -e "${YELLOW} Checking Required Jenkins Plugins...${NC}"
 echo "================================================"
 
 PLUGINS_DIR="/var/lib/jenkins/plugins"
@@ -22,24 +22,24 @@ declare -A REQUIRED_PLUGINS=(
     ["http_request"]="HTTP Request"
 )
 
-echo -e "${YELLOW}📋 Plugin Status:${NC}"
+echo -e "${YELLOW} Plugin Status:${NC}"
 
 MISSING_PLUGINS=()
 
 for plugin in "${!REQUIRED_PLUGINS[@]}"; do
     if sudo ls "$PLUGINS_DIR" 2>/dev/null | grep -q "^${plugin}"; then
-        echo -e "${GREEN}✅ ${REQUIRED_PLUGINS[$plugin]}${NC}"
+        echo -e "${GREEN} ${REQUIRED_PLUGINS[$plugin]}${NC}"
     else
-        echo -e "${RED}❌ ${REQUIRED_PLUGINS[$plugin]} (${plugin})${NC}"
+        echo -e "${RED} ${REQUIRED_PLUGINS[$plugin]} (${plugin})${NC}"
         MISSING_PLUGINS+=("$plugin")
     fi
 done
 
 echo ""
 if [ ${#MISSING_PLUGINS[@]} -eq 0 ]; then
-    echo -e "${GREEN}🎉 All required plugins are installed!${NC}"
+    echo -e "${GREEN} All required plugins are installed!${NC}"
 else
-    echo -e "${YELLOW}⚠️  Missing plugins that need to be installed:${NC}"
+    echo -e "${YELLOW}  Missing plugins that need to be installed:${NC}"
     for plugin in "${MISSING_PLUGINS[@]}"; do
         echo -e "${YELLOW}   - ${REQUIRED_PLUGINS[$plugin]}${NC}"
     done
