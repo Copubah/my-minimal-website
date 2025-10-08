@@ -55,7 +55,7 @@ aws s3 ls s3://YOUR-BUCKET-NAME/
 
 ## Success Indicators
 
-✅ **Deployment Successful When:**
+## Deployment Successful When:**
 - Jenkins build shows green/success status
 - Website loads without errors
 - CSS and JavaScript work correctly

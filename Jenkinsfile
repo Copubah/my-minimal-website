@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'  // Change to your preferred region
-        S3_BUCKET = 'my-minimal-website-12345'  // Replace with your bucket name
+        S3_BUCKET = 'opuba236'  // Replace with your bucket name
         AWS_CREDENTIALS_ID = 'aws-s3-credentials'  // Jenkins credential ID
     }
     
@@ -42,9 +42,8 @@ pipeline {
                     s3Upload(
                         bucket: env.S3_BUCKET,
                         includePathPattern: '**/*',
-                        excludePathPattern: '.git/**,Jenkinsfile,aws-setup.md,README.md',
-                        workingDir: '.',
-                        acl: 'PublicRead'
+                        excludePathPattern: '.git/**,Jenkinsfile,aws-setup.md,README.md,bucket-policy.json,scripts/**',
+                        workingDir: '.'
                     )
                 }
                 echo 'Deployment completed successfully! ✓'
